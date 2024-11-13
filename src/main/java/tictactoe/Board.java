@@ -14,7 +14,8 @@ package tictactoe;
 public class Board {
     /**
      * @brief Costante usata per indicare che una cella è vuota.
-     */
+     * cls
+     */ 
     public static final int CELL_NONE=3;
     /**
      * @brief Costante usata per indicare che una cella contiene
