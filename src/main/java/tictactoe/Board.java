@@ -15,7 +15,7 @@ public class Board {
     /**
      * @brief Costante usata per indicare che una cella è vuota.
      */
-    public static final int CELL_NONE=0;
+    public static final int CELL_NONE=3;
     /**
      * @brief Costante usata per indicare che una cella contiene
      *        il mark X.
@@ -51,11 +51,19 @@ public class Board {
         winner=CELL_NONE;
     }
     
+    public Board(int a) {
+        cell=new int[SIZE];
+        for(int i=0; i<SIZE; i++)
+            cell[i]=CELL_NONE;
+        next=CELL_X;
+        ended=false;
+        winner=CELL_NONE;
+    } 
+    
     /**
      * @brief Costruttore di copia
      * @param[in] other La scacchiera da copiare
      * @post
-     * La scacchiera creata è identica a other.
      */
     public Board(Board other) {
         cell=new int[SIZE];
